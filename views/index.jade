@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1 Choose a programming language
+
+	form.languageSearch
+		input.text(type='text' placeholder='search')
+		input.search(type='submit' value='find language')
+	#results
+		h1 Results
+		.container#programmingResult
+
+		script(type='text/x-handlebars-template', id='result-template')
+			li {{title}} - {{description}}
+
